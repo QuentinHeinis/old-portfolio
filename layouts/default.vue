@@ -2,10 +2,15 @@
 
 <template>
   <header class="header">
-    <NuxtLink to="/">Home</NuxtLink>
-    <NuxtLink to="/about">About</NuxtLink>
-    <NuxtLink to="/contact">Contact</NuxtLink>
-    <NuxtLink to="/portfolio">Projects</NuxtLink>
+    <NuxtLink to="/" class="header__logo">
+      <img src="/favicon.ico" alt="" />
+    </NuxtLink>
+    <nav class="header__nav">
+      <NuxtLink class="header__link" to="/">Home</NuxtLink>
+      <NuxtLink class="header__link" to="/about">About</NuxtLink>
+      <NuxtLink class="header__link" to="/contact">Contact</NuxtLink>
+      <NuxtLink class="header__link" to="/portfolio">Projects</NuxtLink>
+    </nav>
   </header>
   <main class="main">
     <slot />
@@ -77,15 +82,36 @@ body {
   background-size: auto, auto, auto, auto;
   background-color: $primaryBgColor;
   background-size: 40px 40px;
+  padding: 0 rem(16);
+  
   .header {
-    height: 100px;
+    max-width: rem(1200);
+    margin: 0 auto;
+    height: rem(64);
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    &__link {
+      text-decoration: none;
+      color: $white;
+    }
+    &__nav {
+      display: flex;
+      gap: 20px;
+    }
+    &__logo {
+      width: rem(32);
+      height: rem(32);
+    }
   }
   .main {
+    max-width: rem(1200);
+    margin: 0 auto;
     min-height: 100vh;
   }
   .footer {
+    max-width: rem(1200);
+    margin: 0 auto;
     height: 100px;
   }
 }
