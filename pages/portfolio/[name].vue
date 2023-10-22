@@ -12,6 +12,12 @@ const { data: project } = await useAsyncData(name, async () => {
     throw createError({ statusCode: 404, message: "Page not found" });
   }
 });
+useSeoMeta({
+  title: project.value.data.project_name[0].text,
+  ogTitle: project.value.data.project_name[0].text,
+  description: "This is my amazing site, let me tell you all about it.",
+  ogDescription: "This is my amazing site, let me tell you all about it.",
+});
 </script>
 
 <template>
@@ -19,13 +25,20 @@ const { data: project } = await useAsyncData(name, async () => {
     <h1>
       {{ project.data.project_name[0].text }}
     </h1>
-    <img :src="project.data.project_img.url" alt="">
+    <img :src="project.data.project_img.url" alt="" />
     <p>{{ project.data.project_date }}</p>
     <p>{{ project.data.project_type }}</p>
     <p>{{ project.data.project_stack }}</p>
-    <prismic-rich-text :field="project.data.project_desc"/>
-    <p v-if="project.data.project_link.url">{{ project.data.project_link.url }}</p>
-    <img v-for="({project_image}, index) in project.data.project_images" :key="index" :src="project_image.url" alt="">
+    <prismic-rich-text :field="project.data.project_desc" />
+    <p v-if="project.data.project_link.url">
+      {{ project.data.project_link.url }}
+    </p>
+    <img
+      v-for="({ project_image }, index) in project.data.project_images"
+      :key="index"
+      :src="project_image.url"
+      alt=""
+    />
   </div>
 </template>
 
