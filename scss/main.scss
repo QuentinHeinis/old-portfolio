@@ -1,0 +1,11 @@
+@import './foundations/normalized';
+
+body{
+    font-family: sans-serif;
+}
+
+h1{
+    font-family: $title-font;
+    font-size: $big-font-size;
+    text-transform: uppercase;
+}
