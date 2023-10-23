@@ -1,25 +1,25 @@
 <script setup>
 import { emitLeaveHovered, emitHovered } from "~/utils/emit";
-const { client } = usePrismic();
-const { data: projects } = await useAsyncData("home", () => {
-  const response = client.getSingle("projectlist");
-  if (response) {
-    return response;
-  } else {
-    throw createError({ statusCode: 404, message: "Page not found" });
-  }
+
+const props = defineProps({
+  data: {
+    type: Object,
+    required: true,
+  },
+  showBanner: {
+    type: Boolean,
+    required: false,
+    default: true,
+  },
 });
-const selectedProject = computed(() =>
-  projects.value.data.project_list.filter((item) =>
-    item.project.tags.includes("selected")
-  )
-);
+console.log(props.data);
 </script>
 
 <template>
   <div class="c-projects">
-    <infinite content="Here are my selected project" />
+    <infinite content="Here are my selected project" v-if="showBanner" />
     <infinite
+      v-if="showBanner"
       content="Here are my selected project"
       variant="reverse"
       color="green"
@@ -29,7 +29,7 @@ const selectedProject = computed(() =>
       @mouseleave="emitLeaveHovered"
       @mouseover="emitHovered"
       class="c-projects__item"
-      v-for="(item, index) in selectedProject"
+      v-for="(item, index) in data"
       :key="index"
       :to="`portfolio/${item.project.uid}`"
     >

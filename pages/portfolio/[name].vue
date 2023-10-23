@@ -21,19 +21,40 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <h1>
-      {{ project.data.project_name[0].text }}
-    </h1>
-    <img :src="project.data.project_img.url" alt="" />
-    <p>{{ project.data.project_date }}</p>
-    <p>{{ project.data.project_type }}</p>
-    <p>{{ project.data.project_stack }}</p>
-    <prismic-rich-text :field="project.data.project_desc" />
-    <p v-if="project.data.project_link.url">
-      {{ project.data.project_link.url }}
+  <div class="p-portfolioProject">
+    <div class="p-portfolioProject__flex">
+      <h1>
+        {{ project.data.project_name[0].text }} -
+        {{ project.data.project_date }}
+      </h1>
+      <img :src="project.data.project_img.url" alt="" />
+    </div>
+    <h2>Type of project</h2>
+    <p class="p-portfolioProject__flex">
+      {{ project.data.project_type }}
+      <a
+        v-if="project.data.project_link.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        :href="project.data.project_link.url"
+        class="p-portfolioProject__link"
+        @mouseleave="emitLeaveHovered"
+        @mouseover="emitHovered"
+      >
+        Check project
+      </a>
     </p>
+    <hr />
+    <h2>Stack used</h2>
+    <p>{{ project.data.project_stack }}</p>
+    <hr />
+    <h2>Project description</h2>
+    <prismic-rich-text :field="project.data.project_desc" />
+    <hr />
+    <h2>Visuals</h2>
+    <br>
     <img
+      class="p-portfolioProject__img"
       v-for="({ project_image }, index) in project.data.project_images"
       :key="index"
       :src="project_image.url"
@@ -42,4 +63,38 @@ useSeoMeta({
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.p-portfolioProject {
+  padding: 0 rem(100);
+  &__link {
+    display: block;
+    text-align: center;
+    color: $black;
+  }
+  h1 {
+    text-align: center;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgb(128, 128, 128);
+    margin: 0;
+    font-size: rem(20);
+  }
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      max-height: rem(300);
+      object-fit: contain;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  &__img {
+    width: 100%;
+  }
+}
+</style>

@@ -6,6 +6,20 @@ useSeoMeta({
   description: "This is my amazing site, let me tell you all about it.",
   ogDescription: "This is my amazing site, let me tell you all about it.",
 });
+const { client } = usePrismic();
+const { data: projects } = await useAsyncData("home", () => {
+  const response = client.getSingle("projectlist");
+  if (response) {
+    return response;
+  } else {
+    throw createError({ statusCode: 404, message: "Page not found" });
+  }
+});
+const selectedProject = computed(() =>
+  projects.value.data.project_list.filter((item) =>
+    item.project.tags.includes("selected")
+  )
+);
 </script>
 
 <template>
@@ -19,7 +33,9 @@ useSeoMeta({
       @mouseleave="emitLeaveHovered"
       @mouseover="emitHovered"
     >
-      I am<img src="/1.png" alt="" class="p-index__img -space" /><i class="-red">Quentin Heinis</i>
+      I am<img src="/1.png" alt="" class="p-index__img -space" /><i class="-red"
+        >Quentin Heinis</i
+      >
     </h1>
     <p class="p-index__text">
       A Full-stack <img src="/76.png" alt="" class="p-index__img" />
@@ -38,7 +54,7 @@ useSeoMeta({
     >
       based in <img src="/48.png" alt="" class="p-index__img" /> France
     </p>
-    <SelectedProject/>
+    <SelectedProject :data="selectedProject" />
   </div>
 </template>
 

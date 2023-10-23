@@ -9,32 +9,25 @@ const { data: projects } = await useAsyncData("home", () => {
     throw createError({ statusCode: 404, message: "Page not found" });
   }
 });
-// console.log(projects.value);
+const selectedProject = computed(() =>
+  projects.value.data.project_list.filter((item) =>
+    item.project.tags.includes("visible")
+  )
+);
 </script>
 
 <template>
   <div class="p-portfolio">
     <h1>Projects</h1>
-    <NuxtLink
-      class="p-portfolio__link"
-      v-for="(item, index) in projects.data.project_list"
-      :key="index"
-      :to="`portfolio/${item.project.uid}`"
-    >
-      <div>
-        <h2>{{ item.project_title[0].text }}</h2>
-        <img :src="item.project_img.url" alt="">
-        <p v-for="({text}, i) in item.project_stack" :key="i">{{ text }}</p>
-      </div>
-    </NuxtLink>
+    <SelectedProject :data="selectedProject" :showBanner="false" />
   </div>
 </template>
 
 <style lang="scss">
 .p-portfolio {
-  &__link {
-    color: $white;
-    text-decoration: none;
+  h1 {
+    text-align: center;
+    margin-bottom: rem(-50);
   }
 }
 </style>
