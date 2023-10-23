@@ -3,7 +3,17 @@ const cursor = ref()
 onMounted(() => {
   cursor.value.focus()
   window.addEventListener('mousemove', positionElement)
+  window.addEventListener('hovered', handleHover)
+  window.addEventListener('leave', handleLeave)
 })
+
+const isHovered = ref(false)
+const handleHover = () => {
+  isHovered.value = true
+}
+const handleLeave = () => {
+  isHovered.value = false
+}
 const positionElement = (e) => {
   const mouseY = e.clientY;
   const mouseX = e.clientX;
@@ -12,13 +22,14 @@ const positionElement = (e) => {
 }
 onUnmounted(() => {
   window.removeEventListener('mousemove', positionElement)
+  window.removeEventListener('hovered', handleHover)
+  window.removeEventListener('leave', handleLeave)
 })
-
 
 </script>
 
 <template>
-  <span class="cursor" ref="cursor"></span>
+  <span class="cursor" ref="cursor" :class="{ '-hovered': isHovered }"></span>
   <header class="header">
     <nav class="header__nav">
       <NuxtLink to="/" class="header__link"> Quentin Heinis</NuxtLink>
@@ -50,6 +61,11 @@ body {
     height: rem(30);
     background: $white;
     border-radius: 50%;
+    transition: width 0.2s ease, height 0.2s ease;
+    &.-hovered{
+      width: rem(100);
+      height: rem(100);
+    }
   }
   .header {
     position: sticky;

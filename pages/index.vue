@@ -1,4 +1,5 @@
 <script setup>
+import { emitLeaveHovered, emitHovered } from "~/utils/emit";
 useSeoMeta({
   title: "Quentin Heinis",
   ogTitle: "Quentin Heinis",
@@ -12,7 +13,7 @@ useSeoMeta({
   <div class="p-index">
     <span class="p-index__text">Hello <img src="/8.png" alt="" class="p-index__img"></span>
     
-    <h1 class="p-index__text">I am<img src="/1.png" alt="" class="p-index__img -space">Quentin Heinis</h1>
+    <h1 class="p-index__text" @mouseleave="emitLeaveHovered" @mouseover="emitHovered">I am<img src="/1.png" alt="" class="p-index__img -space">Quentin Heinis</h1>
     <p class="p-index__text">
       A Full-stack <img src="/76.png" alt="" class="p-index__img">
     </p>
