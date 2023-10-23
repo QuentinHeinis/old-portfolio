@@ -87,7 +87,43 @@ onUnmounted(() => {
   <main class="main">
     <slot />
   </main>
-  <footer class="footer">footer</footer>
+  <footer class="footer">
+    <div class="footer__content">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/QuentinHeinis"
+      >
+        <div>
+          <img src="/github.png" alt="" />
+          <span>github</span>
+        </div>
+        <span>@QuentinHeinis</span>
+      </a>
+    </div>
+    <div class="footer__content">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.instagram.com/quentinheinis/"
+      >
+        <div>
+          <img src="/insta.png" alt="" />
+          <span>instagram</span>
+        </div>
+        <span>@quentinheinis</span>
+      </a>
+    </div>
+    <div class="footer__content">
+      <NuxtLink to="/contact">
+        <div>
+          <img src="/arobase.png" alt="" />
+          <span>mail</span>
+        </div>
+        <span>quentin@heinis.dev</span>
+      </NuxtLink>
+    </div>
+  </footer>
 </template>
 
 <style lang="scss">
@@ -208,9 +244,38 @@ body {
     min-height: 100vh;
   }
   .footer {
-    max-width: rem(1200);
-    margin: 0 auto;
-    height: 100px;
+    margin-top: rem(100);
+    padding-top: rem(50);
+    padding-bottom: rem(50);
+    border-top: 2px solid $black;
+    display: grid;
+    row-gap: rem(50);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    &__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        text-decoration: none;
+        color: $black;
+      }
+      div {
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid $black;
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        img {
+          width: rem(50);
+          height: rem(50);
+        }
+        span {
+          font-size: rem(20);
+          font-weight: 600;
+        }
+      }
+    }
   }
 }
 </style>
