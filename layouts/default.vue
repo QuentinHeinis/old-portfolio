@@ -1,6 +1,24 @@
-<script setup></script>
+<script setup>
+const cursor = ref()
+onMounted(() => {
+  cursor.value.focus()
+  window.addEventListener('mousemove', positionElement)
+})
+const positionElement = (e) => {
+  const mouseY = e.clientY;
+  const mouseX = e.clientX;
+  cursor.value.style.top = `${mouseY}px`;
+  cursor.value.style.left = `${mouseX}px`;
+}
+onUnmounted(() => {
+  window.removeEventListener('mousemove', positionElement)
+})
+
+
+</script>
 
 <template>
+  <span class="cursor" ref="cursor"></span>
   <header class="header">
     <nav class="header__nav">
       <NuxtLink to="/" class="header__link"> Quentin Heinis</NuxtLink>
@@ -18,7 +36,21 @@
 <style lang="scss">
 body {
   color: $black;
-
+  background: $white;
+  cursor: none;
+  .cursor{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    width: rem(30);
+    height: rem(30);
+    background: $white;
+    border-radius: 50%;
+  }
   .header {
     position: sticky;
     top: 0;
@@ -31,7 +63,7 @@ body {
       color: $black;
     }
     &__nav {
-      font-size: 4.8vw;
+      font-size: 4.5vw;
       font-weight: 600;
       letter-spacing: -2px;
       :nth-child(1):hover {
