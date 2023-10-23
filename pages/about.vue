@@ -42,7 +42,7 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
         HTML, CSS and Javascript.
       </i>
     </p>
-    <img src="/56.png" alt="" />
+    <img class="p-about__img" src="/56.png" alt="" />
     <p class="p-about__text -small">
       At school, I learned how to use
       <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-green"
@@ -76,7 +76,7 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
         >C++</i
       >.
     </p>
-    <img
+    <img class="p-about__img"
       src="/80.png"
       alt=""
       @mouseleave="emitLeaveHovered"
@@ -139,13 +139,18 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
     }
     &.-small {
       i {
-        font-size: 3vw;
+        font-size: rem(24);
         text-transform: uppercase;
       }
       padding: rem(10) 0;
       letter-spacing: 0;
-      font-size: 2vw;
+      font-size: rem(18);
+      text-transform: none;
     }
+  }
+  &__img{
+    margin-top: -10%;
+    margin-bottom: -10%;
   }
 }
 </style>
