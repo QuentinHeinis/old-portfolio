@@ -33,7 +33,9 @@ const handleLeave = () => {
 const handleScroll = () => {
   if (window.scrollY > 10) {
     isScrolled.value = true;
-    scrollTop.value.style.animation = "pop-up 0.5s ease";
+    if (scrollTop.value) {
+      scrollTop.value.style.animation = "pop-up 0.5s ease";
+    }
   } else {
     isScrolled.value = false;
   }

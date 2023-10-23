@@ -6,6 +6,7 @@ useSeoMeta({
   description: "This is my amazing site, let me tell you all about it.",
   ogDescription: "This is my amazing site, let me tell you all about it.",
 });
+
 const { client } = usePrismic();
 const { data: projects } = await useAsyncData("home", () => {
   const response = client.getSingle("projectlist");

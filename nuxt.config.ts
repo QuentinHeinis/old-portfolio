@@ -20,7 +20,11 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ["@nuxtjs/prismic"],
+  runtimeConfig: {
+    mail: process.env.NUXT_MAIL,
+    psw: process.env.NUXT_PSW,
+  },
+  modules: ["@nuxtjs/prismic",],
   devtools: { enabled: true },
   components: [
     {
