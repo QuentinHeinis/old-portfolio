@@ -33,10 +33,10 @@ onUnmounted(() => {
   <span ref="cursor" :class="{'cursor': isInit , ' -hovered': isHovered}"></span>
   <header class="header">
     <nav class="header__nav">
-      <NuxtLink to="/" class="header__link"> Quentin Heinis</NuxtLink>
+      <NuxtLink to="/" class="header__link">Quentin Heinis</NuxtLink>
       <NuxtLink class="header__link" to="/about">About</NuxtLink>
-      <NuxtLink class="header__link" to="/contact">Contact</NuxtLink>
       <NuxtLink class="header__link" to="/portfolio">Projects</NuxtLink>
+      <NuxtLink class="header__link" to="/contact">Contact</NuxtLink>
     </nav>
   </header>
   <main class="main">
@@ -80,6 +80,9 @@ body {
       color: $black;
     }
     &__nav {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
       font-size: 4.5vw;
       font-weight: 600;
       letter-spacing: -2px;
