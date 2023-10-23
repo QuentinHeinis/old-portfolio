@@ -57,7 +57,12 @@ onUnmounted(() => {
 
 <template>
   <span ref="cursor" :class="{ cursor: isInit, ' -hovered': isHovered }"></span>
-  <span class="scrollTop" @click="scrollToTop()" ref="scrollTop" v-if="isScrolled">
+  <span
+    class="scrollTop"
+    @click="scrollToTop()"
+    ref="scrollTop"
+    v-if="isScrolled"
+  >
     <span class="scrollTop__wrap">
       <img src="/127.png" alt="" />
       <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -195,6 +200,7 @@ body {
     }
   }
   .main {
+    overflow: hidden;
     z-index: 1;
     position: relative;
     background: $white;
