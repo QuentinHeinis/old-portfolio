@@ -2,11 +2,8 @@
 
 <template>
   <header class="header">
-    <NuxtLink to="/" class="header__logo">
-      <img src="/favicon.ico" alt="" />
-    </NuxtLink>
     <nav class="header__nav">
-      <NuxtLink class="header__link" to="/">Home</NuxtLink>
+      <NuxtLink to="/" class="header__link"> Quentin Heinis</NuxtLink>
       <NuxtLink class="header__link" to="/about">About</NuxtLink>
       <NuxtLink class="header__link" to="/contact">Contact</NuxtLink>
       <NuxtLink class="header__link" to="/portfolio">Projects</NuxtLink>
@@ -20,84 +17,35 @@
 
 <style lang="scss">
 body {
-  color: $white;
-  background: radial-gradient(
-      50% 50% at 100% 0,
-      $primaryBgColor 0 5%,
-      $secondaryBgColor 6% 15%,
-      $primaryBgColor 16% 25%,
-      $secondaryBgColor 26% 35%,
-      $primaryBgColor 36% 45%,
-      $secondaryBgColor 46% 55%,
-      $primaryBgColor 56% 65%,
-      $secondaryBgColor 66% 75%,
-      $primaryBgColor 76% 85%,
-      $secondaryBgColor 86% 95%,
-      transparent 96%
-    ),
-    radial-gradient(
-      50% 50% at 0 100%,
-      $primaryBgColor 0 5%,
-      $secondaryBgColor 6% 15%,
-      $primaryBgColor 16% 25%,
-      $secondaryBgColor 26% 35%,
-      $primaryBgColor 36% 45%,
-      $secondaryBgColor 46% 55%,
-      $primaryBgColor 56% 65%,
-      $secondaryBgColor 66% 75%,
-      $primaryBgColor 76% 85%,
-      $secondaryBgColor 86% 95%,
-      transparent 96%
-    ),
-    radial-gradient(
-      50% 50% at 50%,
-      $primaryBgColor 0 5%,
-      $secondaryBgColor 6% 15%,
-      $primaryBgColor 16% 25%,
-      $secondaryBgColor 26% 35%,
-      $primaryBgColor 36% 45%,
-      $secondaryBgColor 46% 55%,
-      $primaryBgColor 56% 65%,
-      $secondaryBgColor 66% 75%,
-      $primaryBgColor 76% 85%,
-      $secondaryBgColor 86% 95%,
-      transparent 96%
-    ),
-    radial-gradient(
-        50% 50% at 50%,
-        $primaryBgColor 0 5%,
-        $secondaryBgColor 6% 15%,
-        $primaryBgColor 16% 25%,
-        $secondaryBgColor 26% 35%,
-        $primaryBgColor 36% 45%,
-        $secondaryBgColor 46% 55%,
-        $primaryBgColor 56% 65%,
-        $secondaryBgColor 66% 75%,
-        $primaryBgColor 76% 85%,
-        $secondaryBgColor 86% 95%,
-        transparent 96%
-      )
-      20px 20px;
-  background-color: rgba(0, 0, 0, 0);
-  background-size: auto, auto, auto, auto;
-  background-color: $primaryBgColor;
-  background-size: 40px 40px;
-  padding: 0 rem(16);
-  
+  color: $black;
+
   .header {
-    max-width: rem(1200);
-    margin: 0 auto;
-    height: rem(64);
+    position: sticky;
+    top: 0;
+    min-height: rem(64);
+    text-transform: uppercase;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     &__link {
       text-decoration: none;
-      color: $white;
+      color: $black;
     }
     &__nav {
-      display: flex;
-      gap: 20px;
+      font-size: 4.8vw;
+      font-weight: 600;
+      letter-spacing: -2px;
+      :nth-child(1):hover {
+          color: rgb(255, 62, 62);
+      }
+      :nth-child(2):hover {
+          color: rgb(0, 174, 255);
+      }
+      :nth-child(3):hover {
+          color: rgb(9, 255, 0);
+      }
+      :nth-child(4):hover {
+          color: rgb(249, 60, 255);
+      }
     }
     &__logo {
       width: rem(32);
@@ -105,8 +53,10 @@ body {
     }
   }
   .main {
-    max-width: rem(1200);
-    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+    background: $white;
+    border-top: 2px solid $black;
     min-height: 100vh;
   }
   .footer {
