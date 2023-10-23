@@ -38,25 +38,8 @@ useSeoMeta({
     >
       based in <img src="/48.png" alt="" class="p-index__img" /> France
     </p>
-
-    <div class="p-index__infinite">
-      <p>Here are my selected project</p>
-      <span>Here are my selected project</span>
-      <span>Here are my selected project</span>
-      <span>Here are my selected project</span>
-      <span>Here are my selected project</span>
-      <span>Here are my selected project</span>
-      <span>Here are my selected project</span>
-    </div>
-    <div class="p-index__infinite -reverse">
-      <p>Here are my selected project</p>
-      <span>Here are my selected project</span>
-      <span>Here are my selected project</span>
-      <span>Here are my selected project</span>
-      <span>Here are my selected project</span>
-      <span>Here are my selected project</span>
-      <span>Here are my selected project</span>
-    </div>
+    <infinite content="Here are my selected project" />
+    <infinite content="Here are my selected project" variant="reverse" color="green"/>
   </div>
 </template>
 
@@ -77,37 +60,6 @@ useSeoMeta({
     &.-space {
       padding: 0 2%;
     }
-  }
-  &__infinite {
-    overflow: hidden;
-    background: rgb(219, 100, 255);
-    padding: rem(5) rem(20);
-    display: flex;
-    width: 1500px;
-    margin: 0 auto;
-    text-transform: uppercase;
-    font-weight: 700;
-    * {
-      margin: 0;
-      min-width: 300px;
-      margin-left: 100px;
-      animation: slide 15s linear infinite;
-    }
-    &.-reverse {
-      background: rgb(0, 255, 115);
-      * {
-        animation-direction: reverse;
-      }
-    }
-  }
-}
-
-@keyframes slide {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-1500px, 0, 0); /* The image width */
   }
 }
 </style>
