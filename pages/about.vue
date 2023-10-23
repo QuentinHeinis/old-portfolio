@@ -28,9 +28,13 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
     </p>
     <p class="p-about__text -small">
       So i learned how to use
-      <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-purple">unity</i> and i
-      made my first game using
-      <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-purple">C#</i>.
+      <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-purple"
+        >unity</i
+      >
+      and i made my first game using
+      <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-purple"
+        >C#</i
+      >.
     </p>
     <p class="p-about__text -small">
       Then i wanted to learn more about web development so i learned
@@ -38,29 +42,46 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
         HTML, CSS and Javascript.
       </i>
     </p>
-    <img src="/56.png" alt="">
+    <img src="/56.png" alt="" />
     <p class="p-about__text -small">
       At school, I learned how to use
-      <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-green">Vuejs</i> and
-      <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-green">Nuxtjs</i>
+      <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-green"
+        >Vuejs</i
+      >
+      and
+      <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-green"
+        >Nuxtjs</i
+      >
       which are now my favorites framework.
     </p>
-    
+
     <p
       class="p-about__text -small"
       @mouseleave="emitLeaveHovered"
       @mouseover="emitHovered"
     >
       I learned also
-      <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-blue">Reactjs</i> and
-      <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-blue">Nextjs</i> in
-      my free time.
+      <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-blue"
+        >Reactjs</i
+      >
+      and
+      <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-blue"
+        >Nextjs</i
+      >
+      in my free time.
     </p>
     <p class="p-about__text -small">
       Now, my biggest project I'm working on is a game engine made in
-      <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-red">C++</i>.
+      <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-red"
+        >C++</i
+      >.
     </p>
-    <img src="/80.png" alt="">
+    <img
+      src="/80.png"
+      alt=""
+      @mouseleave="emitLeaveHovered"
+      @mouseover="emitHovered"
+    />
     <a
       target="_blank"
       rel="noopener noreferrer"
@@ -68,17 +89,21 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
       class="p-about__text -small"
       @mouseleave="emitLeaveHovered"
       @mouseover="emitHovered"
-      ><i class="-purple">Click here&nbsp;</i> if you want to check
-      how it goes</a
+      ><i class="-purple">Click here&nbsp;</i> if you want to check how it
+      goes</a
     >
-
-    <infinite content="about me" variant="reverse" color="yellow" class="p-about__gap"/>
+    <infinite
+      content="about me"
+      variant="reverse"
+      color="yellow"
+      class="p-about__gap"
+    />
   </div>
 </template>
 
 <style lang="scss">
 .p-about {
-  &__gap{
+  &__gap {
     margin: rem(50) 0;
   }
   a {
@@ -86,6 +111,7 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
     text-decoration: none;
   }
   &__text {
+    display: block;
     i {
       font-style: normal;
       color: rgb(255, 136, 0);
@@ -112,14 +138,13 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
       color: rgb(255, 136, 0);
     }
     &.-small {
-      i{
+      i {
         font-size: 3vw;
         text-transform: uppercase;
       }
       padding: rem(10) 0;
       letter-spacing: 0;
       font-size: 2vw;
-      // text-transform: none;
     }
   }
 }
