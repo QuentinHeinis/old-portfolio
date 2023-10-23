@@ -52,7 +52,7 @@ const classes = computed(() => {
     margin: 0;
     min-width: 300px;
     margin-left: 100px;
-    animation: slide 15s linear infinite;
+    animation: slide 40s linear infinite;
   }
   &.-red {
     background: rgb(255, 89, 89);

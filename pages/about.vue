@@ -18,7 +18,7 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
     >
       I'm currently a student at <i>MMI Montbéliard.</i>
     </p>
-    <infinite content="about me" />
+    <infinite content="about me" class="p-about__gap" />
     <p class="p-about__text -small">
       I first learned to code in
       <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-red"
@@ -38,12 +38,14 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
         HTML, CSS and Javascript.
       </i>
     </p>
+    <img src="/56.png" alt="">
     <p class="p-about__text -small">
       At school, I learned how to use
       <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-green">Vuejs</i> and
       <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-green">Nuxtjs</i>
       which are now my favorites framework.
     </p>
+    
     <p
       class="p-about__text -small"
       @mouseleave="emitLeaveHovered"
@@ -58,6 +60,7 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
       Now, my biggest project I'm working on is a game engine made in
       <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-red">C++</i>.
     </p>
+    <img src="/80.png" alt="">
     <a
       target="_blank"
       rel="noopener noreferrer"
@@ -65,15 +68,19 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
       class="p-about__text -small"
       @mouseleave="emitLeaveHovered"
       @mouseover="emitHovered"
-      ><span class="p-about__link">Click here&nbsp;</span> if you want to check
+      ><i class="-purple">Click here&nbsp;</i> if you want to check
       how it goes</a
     >
-    <infinite content="about me" variant="reverse" color="yellow"/>
+
+    <infinite content="about me" variant="reverse" color="yellow" class="p-about__gap"/>
   </div>
 </template>
 
 <style lang="scss">
 .p-about {
+  &__gap{
+    margin: rem(50) 0;
+  }
   a {
     color: $black;
     text-decoration: none;
@@ -105,21 +112,14 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
       color: rgb(255, 136, 0);
     }
     &.-small {
-      padding: rem(15) 0;
+      i{
+        font-size: 3vw;
+        text-transform: uppercase;
+      }
+      padding: rem(10) 0;
       letter-spacing: 0;
-      font-size: 4vw;
-    }
-  }
-  &__link {
-    font-weight: 700;
-    font-size: 4vw;
-    letter-spacing: 0;
-    color: rgb(249, 60, 255);
-  }
-  &__img {
-    max-height: 8vw;
-    &.-space {
-      padding: 0 2%;
+      font-size: 2vw;
+      // text-transform: none;
     }
   }
 }
