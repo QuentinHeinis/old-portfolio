@@ -17,8 +17,8 @@ useSeoMeta({
     <p class="p-index__text">
       A Full-stack <img src="/76.png" alt="" class="p-index__img">
     </p>
-    <p class="p-index__text">Developer</p> 
-    <p class="p-index__text">based in <img src="/48.png" alt="" class="p-index__img"> France</p>
+    <p class="p-index__text" @mouseleave="emitLeaveHovered" @mouseover="emitHovered">Developer</p> 
+    <p class="p-index__text" @mouseleave="emitLeaveHovered" @mouseover="emitHovered">based in <img src="/48.png" alt="" class="p-index__img"> France</p>
 
     <div>
       
@@ -31,12 +31,11 @@ useSeoMeta({
   &__text {
     display: flex;
     align-items: center;
-    text-wrap: nowrap;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     margin: 0;
-    font-size: 8vw;
+    font-size: 9vw;
     letter-spacing: -5px;
   }
   &__img{
