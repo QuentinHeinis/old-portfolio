@@ -1,35 +1,36 @@
 <script setup>
-const cursor = ref()
+const cursor = ref();
+const isInit = ref(false);
 onMounted(() => {
-  cursor.value.focus()
-  window.addEventListener('mousemove', positionElement)
-  window.addEventListener('hovered', handleHover)
-  window.addEventListener('leave', handleLeave)
-})
+  cursor.value.focus();
+  isInit.value = true;
+  window.addEventListener("mousemove", positionElement);
+  window.addEventListener("hovered", handleHover);
+  window.addEventListener("leave", handleLeave);
+});
 
-const isHovered = ref(false)
+const isHovered = ref(false);
 const handleHover = () => {
-  isHovered.value = true
-}
+  isHovered.value = true;
+};
 const handleLeave = () => {
-  isHovered.value = false
-}
+  isHovered.value = false;
+};
 const positionElement = (e) => {
   const mouseY = e.clientY;
   const mouseX = e.clientX;
   cursor.value.style.top = `${mouseY}px`;
   cursor.value.style.left = `${mouseX}px`;
-}
+};
 onUnmounted(() => {
-  window.removeEventListener('mousemove', positionElement)
-  window.removeEventListener('hovered', handleHover)
-  window.removeEventListener('leave', handleLeave)
-})
-
+  window.removeEventListener("mousemove", positionElement);
+  window.removeEventListener("hovered", handleHover);
+  window.removeEventListener("leave", handleLeave);
+});
 </script>
 
 <template>
-  <span class="cursor" ref="cursor" :class="{ '-hovered': isHovered }"></span>
+  <span ref="cursor" :class="{'cursor': isInit , ' -hovered': isHovered}"></span>
   <header class="header">
     <nav class="header__nav">
       <NuxtLink to="/" class="header__link"> Quentin Heinis</NuxtLink>
@@ -49,7 +50,7 @@ body {
   color: $black;
   background: $white;
   cursor: none;
-  .cursor{
+  .cursor {
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -62,7 +63,7 @@ body {
     background: $white;
     border-radius: 50%;
     transition: width 0.2s ease, height 0.2s ease;
-    &.-hovered{
+    &.-hovered {
       width: rem(100);
       height: rem(100);
     }
@@ -83,16 +84,16 @@ body {
       font-weight: 600;
       letter-spacing: -2px;
       :nth-child(1):hover {
-          color: rgb(255, 62, 62);
+        color: rgb(255, 62, 62);
       }
       :nth-child(2):hover {
-          color: rgb(0, 174, 255);
+        color: rgb(0, 174, 255);
       }
       :nth-child(3):hover {
-          color: rgb(9, 255, 0);
+        color: rgb(9, 255, 0);
       }
       :nth-child(4):hover {
-          color: rgb(249, 60, 255);
+        color: rgb(249, 60, 255);
       }
     }
     &__logo {
