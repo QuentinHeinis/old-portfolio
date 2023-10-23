@@ -142,7 +142,7 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
         font-size: rem(24);
         text-transform: uppercase;
       }
-      padding: rem(10) 0;
+      padding: rem(5) rem(15);
       letter-spacing: 0;
       font-size: rem(18);
       text-transform: none;
