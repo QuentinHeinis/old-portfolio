@@ -29,7 +29,7 @@ useSeoMeta({
       </h1>
       <img :src="project.data.project_img.url" alt="" />
     </div>
-    <h2>Type of project</h2>
+    <h2 class="-red">Type of project</h2>
     <p class="p-portfolioProject__flex">
       {{ project.data.project_type }}
       <a
@@ -45,13 +45,13 @@ useSeoMeta({
       </a>
     </p>
     <hr />
-    <h2>Stack used</h2>
+    <h2 class="-blue">Stack used</h2>
     <p>{{ project.data.project_stack }}</p>
     <hr />
-    <h2>Project description</h2>
+    <h2 class="-purple">Project description</h2>
     <prismic-rich-text :field="project.data.project_desc" />
     <hr />
-    <h2>Visuals</h2>
+    <h2 class="-orange">Visuals</h2>
     <br />
     <img
       class="p-portfolioProject__img"
@@ -80,6 +80,18 @@ useSeoMeta({
     color: rgb(128, 128, 128);
     margin: 0;
     font-size: rem(20);
+    &.-red {
+      color: rgb(255, 89, 89);
+    }
+    &.-blue {
+      color: rgb(0, 140, 255);
+    }
+    &.-purple {
+      color: rgb(219, 100, 255);
+    }
+    &.-orange {
+      color: rgb(255, 136, 0);
+    }
   }
   &__flex {
     display: flex;
