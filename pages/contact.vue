@@ -34,6 +34,14 @@ const sendMail = async () => {
 const btnContent = computed(() =>
   mailsent.value === true ? "Mail Sent" : "Send Mail"
 );
+
+useSeoMeta({
+  title: "Quentin Heinis || Contact",
+  ogTitle: "Quentin Heinis || Contact",
+  description: "Send me a message",
+  ogDescription: "Send me a message",
+  ogImage: "/favicon.ico",
+});
 </script>
 
 <template>

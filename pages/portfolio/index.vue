@@ -14,6 +14,14 @@ const selectedProject = computed(() =>
     item.project.tags.includes("visible")
   )
 );
+
+useSeoMeta({
+  title:'Quentin Heinis || Portfolio',
+  ogTitle: 'Quentin Heinis || Portfolio',
+  description:'Check out my projects',
+  ogDescription:'Check out my projects',
+  ogImage: '/favicon.ico',
+});
 </script>
 
 <template>

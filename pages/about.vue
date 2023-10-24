@@ -1,5 +1,12 @@
 <script setup>
 import { emitLeaveHovered, emitHovered } from "~/utils/emit";
+useSeoMeta({
+  title:'Quentin Heinis || About me',
+  ogTitle: 'Quentin Heinis || About me',
+  description:'Check out my story',
+  ogDescription:'Check out my story',
+  ogImage: '/favicon.ico',
+});
 </script>
 
 <template>
