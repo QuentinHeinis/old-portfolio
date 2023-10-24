@@ -17,10 +17,10 @@ const description = computed(() => {
   return project.value.data.project_desc[0].text;
 });
 useSeoMeta({
-  title: project.value.data.project_name[0].text,
-  ogTitle: project.value.data.project_name[0].text,
-  description: description.value.slice( 0, 155),
-  ogDescription: description.value.slice( 0, 155),
+  title: "Quentin Heinis || " + project.value.data.project_name[0].text,
+  ogTitle: "Quentin Heinis || " + project.value.data.project_name[0].text,
+  description: description.value.slice(0, 155),
+  ogDescription: description.value.slice(0, 155),
   ogImage: project.value.data.project_img.url,
 });
 </script>
