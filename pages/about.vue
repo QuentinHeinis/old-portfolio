@@ -160,6 +160,8 @@ useSeoMeta({
     }
   }
   &__img {
+    position: relative;
+    z-index: -1;
     margin-top: -10%;
     margin-bottom: -10%;
     @include medium-up {
