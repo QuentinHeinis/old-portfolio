@@ -37,9 +37,12 @@ const props = defineProps({
         <div class="c-projects__texts">
           <h3 class="c-projects__titles">{{ item.project_title[0].text }}</h3>
           <p class="c-projects__tags">
-            <span v-for="({ text }, i) in item.project_stack" :class="text" :key="i">{{
-              text
-            }}</span>
+            <span
+              v-for="({ text }, i) in item.project_stack"
+              :class="text"
+              :key="i"
+              >{{ text }}</span
+            >
           </p>
         </div>
       </div>
@@ -52,13 +55,18 @@ const props = defineProps({
   padding-top: rem(100);
   &__content {
     width: 100%;
+    max-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
   }
   &__img {
     order: 2;
-    max-width: rem(450);
+    @include medium-up {
+      max-width: rem(450);
+    }
+    max-height: 50%;
   }
   &__texts {
     display: flex;
@@ -68,13 +76,16 @@ const props = defineProps({
     width: 50%;
   }
   &__titles {
-    font-size: 4vw;
+    font-size: 7vw;
+    @include medium-up{
+        font-size: 4vw;
+      }
     font-weight: 600;
     text-transform: uppercase;
     margin: 0;
     text-align: center;
   }
-  
+
   &__tags {
     display: flex;
     gap: rem(5);
@@ -91,20 +102,19 @@ const props = defineProps({
     }
     align-items: center;
     display: flex;
-    max-height: rem(300);
     border: 2px solid black;
     color: $black;
     text-decoration: none;
     padding: rem(20);
     margin: rem(20);
   }
-  .VueJs{
+  .VueJs {
     background-color: #3cffa7;
   }
-  .Firebase{
+  .Firebase {
     background-color: #ffcb2b;
   }
-  .UE5{
+  .UE5 {
     background-color: #ff5f5f;
   }
 }
