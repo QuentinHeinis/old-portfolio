@@ -44,7 +44,7 @@ const classes = computed(() => {
   background: rgb(219, 100, 255);
   padding: rem(5) rem(20);
   display: flex;
-  width: 1500px;
+  width: 100%;
   margin: 0 auto;
   text-transform: uppercase;
   font-weight: 700;
