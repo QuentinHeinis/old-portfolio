@@ -69,7 +69,10 @@ const selectedProject = computed(() =>
     text-transform: uppercase;
     margin: 0;
     font-size: 9vw;
-    letter-spacing: -5px;
+    letter-spacing: -2px;
+    @include medium-up {
+      letter-spacing: -5px;
+    }
     i {
       font-style: normal;
       color: rgb(255, 136, 0);

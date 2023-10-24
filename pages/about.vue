@@ -133,7 +133,10 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
     text-transform: uppercase;
     margin: 0;
     font-size: 9vw;
-    letter-spacing: -5px;
+    letter-spacing: -2px;
+    @include medium-up{
+        letter-spacing: -5px;
+      }
     &.-color {
       color: rgb(255, 136, 0);
     }

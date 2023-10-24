@@ -143,7 +143,9 @@ onUnmounted(() => {
 body {
   color: $black;
   background: $white;
-  cursor: none;
+  @include large-up {
+      cursor: none;
+    }
   .scrollTop {
     cursor: pointer;
     height: rem(120);
@@ -184,6 +186,10 @@ body {
     }
   }
   .cursor {
+    display: none;
+    @include large-up {
+      display: block;
+    }
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -218,7 +224,9 @@ body {
       justify-content: space-between;
       font-size: 4.5vw;
       font-weight: 600;
-      letter-spacing: -2px;
+      @include medium-up{
+        letter-spacing: -2px;
+      }
       :nth-child(1):hover {
         color: rgb(255, 62, 62);
       }
