@@ -37,7 +37,7 @@ const props = defineProps({
         <div class="c-projects__texts">
           <h3 class="c-projects__titles">{{ item.project_title[0].text }}</h3>
           <p class="c-projects__tags">
-            <span v-for="({ text }, i) in item.project_stack" :key="i">{{
+            <span v-for="({ text }, i) in item.project_stack" :class="text" :key="i">{{
               text
             }}</span>
           </p>
@@ -74,7 +74,7 @@ const props = defineProps({
     margin: 0;
     text-align: center;
   }
-
+  
   &__tags {
     display: flex;
     gap: rem(5);
@@ -97,6 +97,15 @@ const props = defineProps({
     text-decoration: none;
     padding: rem(20);
     margin: rem(20);
+  }
+  .VueJs{
+    background-color: #3cffa7;
+  }
+  .Firebase{
+    background-color: #ffcb2b;
+  }
+  .UE5{
+    background-color: #ff5f5f;
   }
 }
 </style>
