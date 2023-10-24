@@ -52,7 +52,7 @@ useSeoMeta({
     <prismic-rich-text :field="project.data.project_desc" />
     <hr />
     <h2>Visuals</h2>
-    <br>
+    <br />
     <img
       class="p-portfolioProject__img"
       v-for="({ project_image }, index) in project.data.project_images"
@@ -65,7 +65,7 @@ useSeoMeta({
 
 <style lang="scss">
 .p-portfolioProject {
-  padding: 0 rem(100);
+  padding: 0 7.5%;
   &__link {
     display: block;
     text-align: center;
@@ -85,6 +85,10 @@ useSeoMeta({
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    @include medium-up {
+      flex-wrap: nowrap;
+    }
     img {
       max-height: rem(300);
       object-fit: contain;
