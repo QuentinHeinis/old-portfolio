@@ -154,6 +154,10 @@ import { emitLeaveHovered, emitHovered } from "~/utils/emit";
   &__img{
     margin-top: -10%;
     margin-bottom: -10%;
+    @include medium-up{
+        margin-top: -5%;
+        margin-bottom: -5%;
+      }
   }
 }
 </style>
