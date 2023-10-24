@@ -1,11 +1,11 @@
 <script setup>
 import { emitLeaveHovered, emitHovered } from "~/utils/emit";
 useSeoMeta({
-  title:'Quentin Heinis',
-  ogTitle: 'Quentin Heinis',
-  description:'I\'m a Full-stack Developer based in France',
-  ogDescription:'I\'m a Full-stack Developer based in France',
-  ogImage: '/favicon.ico',
+  title: "Quentin Heinis",
+  ogTitle: "Quentin Heinis",
+  description: "I'm a Full-stack Developer based in France",
+  ogDescription: "I'm a Full-stack Developer based in France",
+  ogImage: "/favicon.png",
 });
 
 const { client } = usePrismic();

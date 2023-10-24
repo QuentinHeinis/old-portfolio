@@ -1,11 +1,11 @@
 <script setup>
 import { emitLeaveHovered, emitHovered } from "~/utils/emit";
 useSeoMeta({
-  title:'Quentin Heinis || About me',
-  ogTitle: 'Quentin Heinis || About me',
-  description:'Check out my story',
-  ogDescription:'Check out my story',
-  ogImage: '/favicon.ico',
+  title: "Quentin Heinis || About me",
+  ogTitle: "Quentin Heinis || About me",
+  description: "Check out my story",
+  ogDescription: "Check out my story",
+  ogImage: "/favicon.png",
 });
 </script>
 
@@ -83,7 +83,8 @@ useSeoMeta({
         >C++</i
       >.
     </p>
-    <img class="p-about__img"
+    <img
+      class="p-about__img"
       src="/80.png"
       alt=""
       @mouseleave="emitLeaveHovered"
@@ -141,9 +142,9 @@ useSeoMeta({
     margin: 0;
     font-size: 9vw;
     letter-spacing: -2px;
-    @include medium-up{
-        letter-spacing: -5px;
-      }
+    @include medium-up {
+      letter-spacing: -5px;
+    }
     &.-color {
       color: rgb(255, 136, 0);
     }
@@ -158,13 +159,13 @@ useSeoMeta({
       text-transform: none;
     }
   }
-  &__img{
+  &__img {
     margin-top: -10%;
     margin-bottom: -10%;
-    @include medium-up{
-        margin-top: -5%;
-        margin-bottom: -5%;
-      }
+    @include medium-up {
+      margin-top: -5%;
+      margin-bottom: -5%;
+    }
   }
 }
 </style>

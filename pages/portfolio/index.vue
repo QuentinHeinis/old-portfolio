@@ -16,11 +16,11 @@ const selectedProject = computed(() =>
 );
 
 useSeoMeta({
-  title:'Quentin Heinis || Portfolio',
-  ogTitle: 'Quentin Heinis || Portfolio',
-  description:'Check out my projects',
-  ogDescription:'Check out my projects',
-  ogImage: '/favicon.ico',
+  title: "Quentin Heinis || Portfolio",
+  ogTitle: "Quentin Heinis || Portfolio",
+  description: "Check out my projects",
+  ogDescription: "Check out my projects",
+  ogImage: "/favicon.png",
 });
 </script>
 
