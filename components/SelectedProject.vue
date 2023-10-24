@@ -117,5 +117,14 @@ const props = defineProps({
   .UE5 {
     background-color: #ff5f5f;
   }
+  .OpenAi{
+    background-color: #9b59b6;
+  }
+  .Supabase{
+    background-color: #1abc9c;
+  }
+  .ReactJs{
+    background-color: #00d8ff;
+  }
 }
 </style>
