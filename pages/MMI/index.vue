@@ -198,12 +198,7 @@
           <div class="row">
             <div class="col-md-6">
               <h3>MMI Expo</h3>
-              <p>
-                Le défi 24h est un challenge présent depuis de nombreuses années
-                dans le département MMI de Montbéliard, 24h dans le département
-                pour réaliséer un projet créatif avec un thème prédéfinis. Cette
-                années vous aurez droit au Festival 24h.
-              </p>
+              <p>Site web pour l'exposition MMI Expo 2023/2024</p>
             </div>
             <div class="col-md-6">
               <h5>Équipe</h5>
