@@ -232,13 +232,13 @@
             <div class="col-md-6">
               <h5>Projet final</h5>
               <p class="btn-group">
-                <a href="#" class="btn btn-sm btn-outline-secondary"
+                <a href="https://github.com/QuentinHeinis/expositionProjet" class="btn btn-sm btn-outline-secondary"
                   >Repository Github</a
                 >
-                <a href="#" class="btn btn-sm btn-outline-secondary"
+                <a href="https://docs.google.com/presentation/d/1VbdYt5Bxz9FsShAVpkMJogc2GaCmM3TBx7KnVYGTgcs/edit#slide=id.p" class="btn btn-sm btn-outline-secondary"
                   >Slides de présentation</a
                 >
-                <a href="#" class="btn btn-sm btn-primary">Projet final</a>
+                <a href="https://exposition-projet.vercel.app/" class="btn btn-sm btn-primary">Projet final</a>
               </p>
             </div>
           </div>
