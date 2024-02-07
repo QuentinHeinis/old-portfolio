@@ -191,7 +191,7 @@
         </div>
       </div>
 
-      `
+      
       <div class="card mb-4 shadow-sm">
         <div class="card-header">Projet collectif S.5</div>
         <div class="card-body">
@@ -239,6 +239,33 @@
                   >Slides de présentation</a
                 >
                 <a href="https://exposition-projet.vercel.app/" class="btn btn-sm btn-primary">Projet final</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">Projet individuel S.6</div>
+        <div class="card-body">
+          <h3>Suihira</h3>
+          <p>Suihira est un réseau social permettant la communication via plusieur biai</p>
+
+          <div class="row">
+            <div class="col-md-6">
+              <h5>Projet</h5>
+              <p class="btn-group">
+                <a
+                  href="https://github.com/QuentinHeinis/DiscordLike"
+                  class="btn btn-sm btn-outline-secondary"
+                  >Repository Github</a
+                >
+                <a href="https://docs.google.com/presentation/d/11epMOEzkO0oM6TQjmXSd9i07cnaJ8y2VynyzpjZ2UQI/edit?usp=sharing" class="btn btn-sm btn-outline-secondary"
+                  >Slides de présentation</a
+                >
+                <a href="https://suihira.heinis.dev" class="btn btn-sm btn-primary"
+                  >Projet final</a
+                >
               </p>
             </div>
           </div>
