@@ -30,7 +30,7 @@ const props = defineProps({
       class="c-projects__item"
       v-for="(item, index) in data"
       :key="index"
-      :to="`portfolio/${item.project.uid}`"
+      :to="`/portfolio/${item.project.uid}`"
     >
       <div class="c-projects__content">
         <img class="c-projects__img" :src="item.project_img.url" alt="" />
