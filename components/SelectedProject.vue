@@ -126,5 +126,8 @@ const props = defineProps({
   .ReactJs{
     background-color: #00d8ff;
   }
+  .AstroJs{
+     background-color:hsl(224, 100%, 85%);
+  }
 }
 </style>
