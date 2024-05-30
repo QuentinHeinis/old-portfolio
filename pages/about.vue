@@ -140,8 +140,11 @@ useSeoMeta({
     font-weight: 400;
     text-transform: uppercase;
     margin: 0;
-    font-size: 9vw;
+    font-size: 6.5vw;
     letter-spacing: -2px;
+    &h1{
+      font-size: 9vw;
+    }
     @include medium-up {
       letter-spacing: -5px;
     }
