@@ -118,7 +118,7 @@ useSeoMeta({
     color: $black;
     text-decoration: none;
   }
-  h1.&__text{
+  h1.p-about__text{
       font-size: 9vw;
   }
   &__text {
