@@ -23,7 +23,7 @@ useSeoMeta({
       @mouseleave="emitLeaveHovered"
       @mouseover="emitHovered"
     >
-      I'm currently a student at <i>MMI Montbéliard.</i>
+      I am currently a web developer at <i>Studio Pogo</i> on a work-study basis
     </p>
     <infinite content="about me" class="p-about__gap" />
     <p class="p-about__text -small">
