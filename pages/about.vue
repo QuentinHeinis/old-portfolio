@@ -118,6 +118,9 @@ useSeoMeta({
     color: $black;
     text-decoration: none;
   }
+  h1.&__text{
+      font-size: 9vw;
+  }
   &__text {
     display: block;
     i {
@@ -142,9 +145,7 @@ useSeoMeta({
     margin: 0;
     font-size: 6.5vw;
     letter-spacing: -2px;
-    &h1{
-      font-size: 9vw;
-    }
+
     @include medium-up {
       letter-spacing: -5px;
     }
