@@ -108,7 +108,7 @@ const props = defineProps({
     padding: rem(20);
     margin: rem(20);
   }
-  .VueJs {
+  .VueJs, .NuxtJs {
     background-color: #3cffa7;
   }
   .Firebase {
@@ -128,6 +128,9 @@ const props = defineProps({
   }
   .AstroJs{
      background-color:hsl(224, 100%, 85%);
+  }
+  .GSAP{
+   background-color:#0ae448;
   }
 }
 </style>
