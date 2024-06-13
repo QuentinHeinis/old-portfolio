@@ -25,6 +25,7 @@ useSeoMeta({
     >
       I am currently a web developer at <i>Studio Pogo</i> on a work-study basis
     </p>
+    <p class="p-about__text">I am also <i class="-purple">freelance</i> so if you need a project contact me</p>
     <infinite content="about me" class="p-about__gap" />
     <p class="p-about__text -small">
       I first learned to code in
