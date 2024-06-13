@@ -79,7 +79,7 @@ useSeoMeta({
       in my free time.
     </p>
     <p class="p-about__text -small">At Studio Pogo, I am using often AstroJs and if I need to I install
-<i class="-blue">Reactjs</i> or <i class="-green">Vuejs</i> on it</p>
+<i class="-blue">Reactjs</i> or <i class="-green">Vuejs</i> on it.</p>
     <p class="p-about__text -small">
       Now, my biggest project I'm working on is a game engine made in
       <i @mouseleave="emitLeaveHovered" @mouseover="emitHovered" class="-red"
