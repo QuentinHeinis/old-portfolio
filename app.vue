@@ -1,3 +1,8 @@
+<script setup>
+  await navigateTo('https://www.heinis.dev/', {
+  external: true
+})
+</script>
 <template>
   <NuxtLayout>
     <NuxtPage />
